@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class ChainTextStyle {
-  static lightSofiaPro({Color color = Colors.black, required double size}) =>
-      _sofiaPro(color, size, FontWeight.w400);
+class TS {
+  static lightLato({Color color = Colors.white, required double size}) =>
+      _lato(color, size, FontWeight.w400);
 
-  static heavySofiaPro({Color color = Colors.black, required double size}) =>
-      _sofiaPro(color, size, FontWeight.w500);
+  static heavyLato({Color color = Colors.white, required double size}) =>
+      _lato(color, size, FontWeight.w900);
 
-  static TextStyle _sofiaPro(Color color, double size, FontWeight fontWeight) {
-    return _textStyle("SofiaPro", color, size, fontWeight);
+  static TextStyle _lato(Color color, double size, FontWeight fontWeight) {
+    return _textStyle("Lato", color, size, fontWeight);
   }
 }
 
 TextStyle _textStyle(
     String fontFamily, Color color, double size, FontWeight fontWeight) {
-  return TextStyle(
-      fontFamily: fontFamily,
-      color: color,
-      fontSize: size,
-      fontWeight: fontWeight);
+  return GoogleFonts.lato(color: color, fontSize: size, fontWeight: fontWeight);
 }
